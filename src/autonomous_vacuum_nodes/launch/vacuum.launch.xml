@@ -1,0 +1,16 @@
+<launch>
+  <arg name="initial_battery_percent" default="100.0"/>
+  <arg name="dustbin_capacity_cells" default="35"/>
+  <arg name="rviz" default="false" description="Open the top-down floor view"/>
+  <node pkg="autonomous_vacuum_nodes" exec="map_loader" output="screen"/>
+  <node pkg="autonomous_vacuum_nodes" exec="hardware_driver" output="screen">
+    <param name="initial_battery_percent" value="$(var initial_battery_percent)" type="float"/>
+    <param name="dustbin_capacity_cells" value="$(var dustbin_capacity_cells)" type="int"/>
+  </node>
+  <node pkg="autonomous_vacuum_nodes" exec="coverage_planner" output="screen"/>
+  <node pkg="autonomous_vacuum_nodes" exec="motion_controller" output="screen"/>
+  <node pkg="autonomous_vacuum_nodes" exec="task_manager" output="screen"/>
+  <node pkg="autonomous_vacuum_nodes" exec="slam_node" output="screen"/>
+  <node if="$(var rviz)" pkg="rviz2" exec="rviz2" name="vacuum_rviz"
+        args="-d $(find-pkg-share autonomous_vacuum_nodes)/config/vacuum.rviz" output="screen"/>
+</launch>

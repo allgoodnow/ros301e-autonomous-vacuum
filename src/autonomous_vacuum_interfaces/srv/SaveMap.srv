@@ -1,0 +1,6 @@
+string floor_id
+string map_state
+nav_msgs/OccupancyGrid grid
+---
+bool success
+string message

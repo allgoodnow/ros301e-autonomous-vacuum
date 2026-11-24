@@ -1,0 +1,7 @@
+float32 battery_percent
+string dustbin_status
+bool cliff_detected
+bool bumper_pressed
+uint32 dustbin_cells
+uint32 dustbin_capacity_cells
+bool charging

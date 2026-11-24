@@ -1,0 +1,9 @@
+# Physical environment used by the simulator only. First row is at y=0.
+grid:
+  - "##########"
+  - "#........#"
+  - "#..#.....#"
+  - "#..#..##.#"
+  - "#.....#..#"
+  - "#........#"
+  - "##########"

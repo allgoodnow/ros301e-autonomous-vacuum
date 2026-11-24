@@ -1,0 +1,21 @@
+# Goal
+string mode
+string power_mode
+---
+# Result
+float64 cleaned_area_m2
+float64 elapsed_seconds
+uint8 SUCCESS=0
+uint8 CANCELED=1
+uint8 FAILED=2
+uint8 LOW_BATTERY=3
+uint8 DUSTBIN_FULL=4
+uint8 completion_code
+string message
+---
+# Feedback
+string current_room
+float32 completion_percent
+float32 battery_percent
+# WORKING, RETURNING_LOW_BATTERY, RETURNING_DUSTBIN_FULL, or CHARGING.
+string phase

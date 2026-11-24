@@ -1,0 +1,13 @@
+# Rows run from y=0 upward. Each character is one cell.
+# Pose format: [column, row, heading in degrees].
+resolution: 0.5
+map_state: complete
+initial_pose: [1, 1, 0]
+dock_pose: [1, 1, 0]
+grid:
+  - "########"
+  - "#......#"
+  - "#..#...#"
+  - "#..#...#"
+  - "#......#"
+  - "########"

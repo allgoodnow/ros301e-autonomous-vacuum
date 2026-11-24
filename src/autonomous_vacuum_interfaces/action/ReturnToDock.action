@@ -1,0 +1,10 @@
+# Empty floor_id uses the currently selected floor.
+string floor_id
+# Filled by task_manager for a mid-task dock visit. Leave empty for a standalone return.
+string parent_session_id
+---
+bool docked
+float64 elapsed_seconds
+string message
+---
+float64 distance_to_dock_m
